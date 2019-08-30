@@ -1,14 +1,29 @@
+// var MathCalculatorLoader = function (require, exports, module) {
+//     var exec = require('cordova/exec');
+
+//     // var intervalId;
+
+//     function Mathcalculator() { }
+//     Mathcalculator.prototype.add = function (arg0, success, error) {
+//         exec(success, error, 'MathcalculatorManager', 'add', [arg0]);
+//     };
+
+//     Mathcalculator.prototype.subtract = function (arg0, success, error) {
+//         exec(success, error, 'MathcalculatorManager', 'subtract', [arg0]);
+//     };
+
+//     var mathCalculator = new Mathcalculator();
+//     module.exports = mathCalculator;
+// };
+
+
+
+////////////////////////////////////////////
+
 var exec = require('cordova/exec');
 
-//for multiple purpose add module prefixes
+function mathCalculator() { }
 
-// module.exports.coolMethod = function (arg0, success, error) {
-//     exec(success, error, 'Mathcalculator', 'coolMethod', [arg0]);
-// };
-function mathCalculator() {
-
-
-}
 mathCalculator.prototype.add = function (arg0, success, error) {
     exec(success, error, 'Mathcalculator', 'add', [arg0]);
 };
