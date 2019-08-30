@@ -5,11 +5,17 @@ var exec = require('cordova/exec');
 // module.exports.coolMethod = function (arg0, success, error) {
 //     exec(success, error, 'Mathcalculator', 'coolMethod', [arg0]);
 // };
+function mathCalculator() {
 
-module.exports.add = function (arg0, success, error) {
+
+}
+mathCalculator.prototype.add = function (arg0, success, error) {
     exec(success, error, 'Mathcalculator', 'add', [arg0]);
 };
 
-module.exports.subtract = function (arg0, success, error) {
+mathCalculator.prototype.subtract = function (arg0, success, error) {
     exec(success, error, 'Mathcalculator', 'subtract', [arg0]);
 };
+
+
+module.exports = new mathCalculator();
